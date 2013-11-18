@@ -67,9 +67,6 @@ class WebHooksPlugin(Plugin):
         return resp
 
     def post_process(self, group, event, is_new, is_sample, **kwargs):
-        if not is_new:
-            return
-
         if not self.is_configured(group.project):
             return
 
